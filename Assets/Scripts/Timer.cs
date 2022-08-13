@@ -27,4 +27,10 @@ public class Timer : MonoBehaviour
         //сигнал окончания игры
 
     }
+
+    private void  UpdateTimer(int newTime)
+    {
+        Time=newTime;
+        TimeText.text = Time.ToString();
+    }
 }

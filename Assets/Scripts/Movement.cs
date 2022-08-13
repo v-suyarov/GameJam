@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EventBus.onMoved += UpdateTarget;
     }
 
     // Update is called once per frame

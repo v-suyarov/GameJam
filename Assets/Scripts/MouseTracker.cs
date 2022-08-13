@@ -21,7 +21,7 @@ using System;
     }
     private void FindMousePosition()
     {
-
+       
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition = new Vector3(mousePosition.x, mousePosition.y, 0);
         EventBus.onMoved?.Invoke(mousePosition);
