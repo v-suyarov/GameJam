@@ -17,6 +17,7 @@ public class Timer : MonoBehaviour
    
     private IEnumerator Countdown()
     {
+        TimeText.text = Time.ToString();
         while (Time > 0)
         {
             yield return new WaitForSeconds(1);
