@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EventBus.onMoved += UpdateTarget;
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
    
     private void Move()
     {
-        if ((target - transform.position).magnitude > movementAccuracy)
+        if ((target - transform.position).magnitude > movementAccuracy&& isInsideBorders())
         {
             Vector3 direction = (target - transform.position).normalized;
             transform.Translate(direction * speed * Time.deltaTime, Space.World);
@@ -40,5 +40,23 @@ public class Movement : MonoBehaviour
     private void UpdateTarget(Vector3 newTarget)
     {
         target = newTarget;
+    }
+    private bool isInsideBorders()
+    {
+        bool result = true;
+       
+        if (transform.position.x<LevelSettings.Instance.borders[Borders.LEFT]
+            || transform.position.x > LevelSettings.Instance.borders[Borders.RIGHT]
+            || transform.position.y < LevelSettings.Instance.borders[Borders.BOTTOM]
+            || transform.position.y > LevelSettings.Instance.borders[Borders.TOP])
+        {
+            if(!LevelSettings.Instance.isInsideBorders(target))
+            {
+                result = false;
+            }
+                  
+        }
+
+        return result;
     }
 }
