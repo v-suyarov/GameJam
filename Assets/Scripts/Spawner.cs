@@ -15,8 +15,8 @@ public abstract class Spawner : MonoBehaviour
     protected Vector3 GetRandomPosition(int maxDistance)
     {
         Vector3 pos = Vector3.zero;
-        pos.x = UnityEngine.Random.Range(0, 100) - 50;
-        pos.y = UnityEngine.Random.Range(0, 100) - 50;
+        pos.x = UnityEngine.Random.Range(0, LevelSettings.Instance.GetLevelSize()) - 50;
+        pos.y = UnityEngine.Random.Range(0, LevelSettings.Instance.GetLevelSize()) - 50;
         return pos;
     }
     protected abstract void Spawn();

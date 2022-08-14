@@ -78,4 +78,17 @@ public class LevelSettings : MonoBehaviour
     {
         backGround.localScale = new Vector3(levelSize, levelSize, 1);
     }
+    public bool isInsideBorders(Vector3 target)
+    {
+        bool result = true;
+
+            if (target.x < LevelSettings.Instance.borders[Borders.LEFT]
+            || target.x > LevelSettings.Instance.borders[Borders.RIGHT]
+            || target.y < LevelSettings.Instance.borders[Borders.BOTTOM]
+            || target.y > LevelSettings.Instance.borders[Borders.TOP])
+            {
+                result = false;
+            }
+        return result;
+    }
 }

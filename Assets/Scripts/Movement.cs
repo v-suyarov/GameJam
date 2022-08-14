@@ -44,19 +44,13 @@ public class Movement : MonoBehaviour
     private bool isInsideBorders()
     {
         bool result = true;
-        float test1 = LevelSettings.Instance.borders[Borders.LEFT];
-        float test2 = LevelSettings.Instance.borders[Borders.RIGHT];
-        float test3 = LevelSettings.Instance.borders[Borders.BOTTOM];
-        float test4 = LevelSettings.Instance.borders[Borders.TOP];
+       
         if (transform.position.x<LevelSettings.Instance.borders[Borders.LEFT]
             || transform.position.x > LevelSettings.Instance.borders[Borders.RIGHT]
             || transform.position.y < LevelSettings.Instance.borders[Borders.BOTTOM]
             || transform.position.y > LevelSettings.Instance.borders[Borders.TOP])
         {
-            if(target.x < LevelSettings.Instance.borders[Borders.LEFT]
-            || target.x > LevelSettings.Instance.borders[Borders.RIGHT]
-            || target.y < LevelSettings.Instance.borders[Borders.BOTTOM]
-            || target.y > LevelSettings.Instance.borders[Borders.TOP])
+            if(!LevelSettings.Instance.isInsideBorders(target))
             {
                 result = false;
             }
