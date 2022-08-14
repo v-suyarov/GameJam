@@ -5,7 +5,7 @@ using System;
 
  class MouseTracker : MonoBehaviour
 {
-    public static Action<Vector3> onMoved;
+   
     public  Vector3 mousePosition { get; private set ; } = Vector3.zero;
    
 

@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-       Time = StartTime;
+        Time = StartTime;
         StartCoroutine(Countdown());
     }
 
@@ -28,9 +28,9 @@ public class Timer : MonoBehaviour
 
     }
 
-    private void  UpdateTimer(int newTime)
+    public void  AddTimer(int addTime)
     {
-        Time=newTime;
+        Time += addTime;
         TimeText.text = Time.ToString();
     }
 }
