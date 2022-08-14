@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1396830959144920775}
   - component: {fileID: 7568573297561416948}
   - component: {fileID: -584113189694722855}
-  - component: {fileID: -3648969517782694661}
+  - component: {fileID: -526166560373319718}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Enemy
@@ -194,7 +194,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-3648969517782694661
+--- !u!114 &-526166560373319718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,9 +203,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6871400311649214847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b38307b12cec44d86f3f45c2d23186, type: 3}
+  m_Script: {fileID: 11500000, guid: 37a16478015846f4790e5b8ddea22941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 1
-  Speed: 1
-  SpeedMultiplier: 2
+  maxDistance: 4.6
+  Speed: 1.71
+  SpeedMultiplier: 1.25
+  RotateDesiredDuration: 1

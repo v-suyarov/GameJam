@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7290118324636643974}
   - component: {fileID: 1749966525424741632}
   - component: {fileID: -3343475806930357876}
-  - component: {fileID: -658200824914074880}
+  - component: {fileID: -1127730692939602254}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-658200824914074880
+--- !u!114 &-1127730692939602254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,12 +109,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 359698509724177860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b38307b12cec44d86f3f45c2d23186, type: 3}
+  m_Script: {fileID: 11500000, guid: 37a16478015846f4790e5b8ddea22941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 1
-  Speed: 1
-  SpeedMultiplier: 2
+  maxDistance: 2.7
+  Speed: 1.71
+  SpeedMultiplier: 1.25
+  speedRotate: 2
+  RotateDesiredDuration: 1
 --- !u!1 &520864005981503353
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,14 +141,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520864005981503353}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.71, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7726226351310067458}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1345631526147075463
 SpriteRenderer:
   m_ObjectHideFlags: 0

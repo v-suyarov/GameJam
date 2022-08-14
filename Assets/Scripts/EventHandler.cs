@@ -16,6 +16,7 @@ public class EventHandler : MonoBehaviour
     
     private void AbsorptionProcessing(ObjectSettings objectSettings1, ObjectSettings objectSettings2)
     {
+
         if(objectSettings1.power>=objectSettings2.power)
         {
             GameObject.Destroy(objectSettings2.gameObject);
