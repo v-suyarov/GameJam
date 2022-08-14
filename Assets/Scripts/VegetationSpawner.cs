@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class VegetationSpawner : Spawner
 {
-    
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Spawn();
-    }
-
    protected override void Spawn()
     {
         for (int i = 0; i < LevelSettings.Instance.GetVegetationCount(); i++)
@@ -22,18 +13,20 @@ public class VegetationSpawner : Spawner
             float scaler;
             if (UnityEngine.Random.Range(0, 2) == 0)
             {
-                scaler = UnityEngine.Random.Range(1f, sizeMultiplier);
+                scaler = UnityEngine.Random.Range(1f, powerMultiplier);
             }
             else
             {
-                scaler = 1 / UnityEngine.Random.Range(1f, sizeMultiplier);
+                scaler = 1 / UnityEngine.Random.Range(1f, powerMultiplier);
             }
 
-            
+
             GameObject obj = Instantiate(prefab, GetRandomPosition(LevelSettings.Instance.GetLevelSize()), Quaternion.identity, container);
-            obj.transform.localScale = new Vector3(prefab.transform.localScale.x * scaler, prefab.transform.localScale.y * scaler, obj.transform.localScale.z);
+            obj.GetComponent<ObjectSettings>().power = (int)(prefab.GetComponent<ObjectSettings>().power * scaler);
+           
 
         }
+        
     }
     
   

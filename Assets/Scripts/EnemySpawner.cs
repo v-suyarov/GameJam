@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : Spawner
 {
-    void Start()
-    {
-        Spawn();
-    }
-
+    
     protected override void Spawn()
     {
         for (int i = 0; i < LevelSettings.Instance.GetEnemysCount(); i++)
@@ -18,17 +14,19 @@ public class EnemySpawner : Spawner
             float scaler;
             if (UnityEngine.Random.Range(0, 2) == 0)
             {
-                scaler = UnityEngine.Random.Range(1f, sizeMultiplier);
+                scaler = UnityEngine.Random.Range(1f, powerMultiplier);
             }
             else
             {
-                scaler = 1 / UnityEngine.Random.Range(1f, sizeMultiplier);
+                scaler = 1 / UnityEngine.Random.Range(1f, powerMultiplier);
             }
 
 
             GameObject obj = Instantiate(prefab, GetRandomPosition(LevelSettings.Instance.GetLevelSize()), Quaternion.identity, container);
-            obj.transform.localScale = new Vector3(prefab.transform.localScale.x * scaler, prefab.transform.localScale.y * scaler, obj.transform.localScale.z);
+            obj.GetComponent<ObjectSettings>().power = Mathf.CeilToInt((prefab.GetComponent<ObjectSettings>().power * scaler));
+
         }
+        
     }
   
    

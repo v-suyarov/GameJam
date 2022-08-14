@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2829f45964d625b4d941d96055ea60a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeMultiplier: 1
+  powerMultiplier: 49
   prefabs:
   - {fileID: 1833073751513268395, guid: 0198a5c4a032011469e6655f82c9a5e5, type: 3}
   - {fileID: 359698509724177860, guid: c87c840ec82b7314196479860f930cb0, type: 3}
@@ -515,6 +515,8 @@ GameObject:
   - component: {fileID: 920568883}
   - component: {fileID: 920568882}
   - component: {fileID: 920568884}
+  - component: {fileID: 920568886}
+  - component: {fileID: 920568885}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -593,6 +595,32 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1494110902}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &920568885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920568881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3c3d28eb1dadb438f0848c7c024678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "move\u0421ameraBackPerPower": 2
+  maxSize: 25
+--- !u!114 &920568886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920568881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70b2042f9fd37c469006749b497d9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &931795249
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777bd11ca0fc5034db69b34c1cd58ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeMultiplier: 1.23
+  powerMultiplier: 1.5
   prefabs:
   - {fileID: 4749957349608401289, guid: b9db07ab73226f04e878b854e0f5ef57, type: 3}
 --- !u!4 &1231558963
@@ -998,7 +1026,6 @@ GameObject:
   - component: {fileID: 1619662371}
   - component: {fileID: 1619662370}
   - component: {fileID: 1619662373}
-  - component: {fileID: 1619662374}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1106,49 +1133,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1619662374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619662369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70b2042f9fd37c469006749b497d9e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1923592891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7344120546304512772, guid: d974aa72b3c770c48be56a884f349963, type: 3}
-  m_PrefabInstance: {fileID: 7344120545472373183}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1923592892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7344120546304512771, guid: d974aa72b3c770c48be56a884f349963, type: 3}
   m_PrefabInstance: {fileID: 7344120545472373183}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1923592896
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923592891}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &7344120545472373183
 PrefabInstance:
   m_ObjectHideFlags: 0

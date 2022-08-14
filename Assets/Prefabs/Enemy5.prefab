@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 655213683428120187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5114856309595690152}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.4339623, g: 0, b: 0.03701221, a: 1}
+  m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
+  m_Color: {r: 1, g: 0, b: 0.19564247, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 7159728873951432405}
   - component: {fileID: 4591880532142965542}
   - component: {fileID: 9090138069241105738}
+  - component: {fileID: -1085328617017812156}
   m_Layer: 0
   m_Name: Enemy5
   m_TagString: Enemy
@@ -115,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 779216958162599110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7053234801535711456}
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeForEating: 8
-  power: 38
+  power: 10
 --- !u!61 &6135548762857142979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -210,7 +211,21 @@ MonoBehaviour:
   maxDistance: 2.7
   Speed: 1.71
   SpeedMultiplier: 1.25
-  speedRotate: 2
+  RotateDesiredDuration: 1
+--- !u!114 &-1085328617017812156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779216958162599110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455ce23f3a8ac854aa01596dcb68f453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplicationFactorPerPower: 2
+  maxSize: 15
 --- !u!1 &3050523624090808829
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3050523624090808829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.39, y: 0, z: 0}
+  m_LocalPosition: {x: 0.29, y: 0, z: 0}
   m_LocalScale: {x: 0.24, y: 0.53, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
