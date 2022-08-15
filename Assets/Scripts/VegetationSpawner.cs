@@ -29,7 +29,7 @@ public class VegetationSpawner : Spawner
             countObject++;
 
         }
-        Debug.Log(countObject);
+        
         
     }
     IEnumerator Spawner(float timerateSpawn)

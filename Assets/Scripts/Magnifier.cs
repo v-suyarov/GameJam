@@ -41,10 +41,7 @@ public class Magnifier : MonoBehaviour
     }
     public void Increase(ObjectSettings absorbedObject)
     {
-        if (transform.CompareTag("Player"))
-        {
-            Debug.Log(123);
-        }
+        
         transform.GetComponent<ObjectSettings>().power += Mathf.CeilToInt(absorbedObject.power*absorptionModifier);
         UpdateSize();
     }

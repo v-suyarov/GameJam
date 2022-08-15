@@ -26,7 +26,7 @@ public class CameraBehaviour : MonoBehaviour
     private void Update()
     {
         UpdateSize();
-        Debug.Log(VegetationSpawner.countObject);
+       
     }
 
     private void UpdateSize()

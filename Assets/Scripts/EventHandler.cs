@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-
+using LootLocker.Requests;
+using TMPro;
 public class EventHandler : MonoBehaviour
 {
-   
+    public Leaderboard leaderboard;
+    int leaderboardID = 5564;
     private void OnEnable()
     {
         EventBus.onAbsorbed +=AbsorptionProcessing;
@@ -21,6 +23,11 @@ public class EventHandler : MonoBehaviour
         if(objectSettings1.power>=objectSettings2.power)
         {
             objectSettings1.GetComponent<Magnifier>().Increase(objectSettings2);
+            if (objectSettings2.CompareTag("Player"))
+            {
+
+                StartCoroutine(leaderboard.SubmitScoreRoutine(Timer.Time));
+            }
             GameObject.Destroy(objectSettings2.gameObject);
 
         }
@@ -37,5 +44,5 @@ public class EventHandler : MonoBehaviour
             gameObject.GetComponent<CameraBehaviour>().AddCameraSize(objectSettings1.power);
         }
     }
-
+ 
 }
