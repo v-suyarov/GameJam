@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1319287792071710944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 803130853421251173}
@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: -5452587803974169706}
   - component: {fileID: 5808331859599709515}
   - component: {fileID: 3737247512505024313}
+  - component: {fileID: -8469028090314641161}
+  - component: {fileID: -2260330176944403443}
   m_Layer: 0
   m_Name: Vegetation
   m_TagString: Vegetation
@@ -171,3 +173,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8469028090314641161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4749957349608401289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fa4011c451e3c4cad80547ddef0507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeForEating: 9
+  power: 1
+--- !u!114 &-2260330176944403443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4749957349608401289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455ce23f3a8ac854aa01596dcb68f453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplicationFactorPerPower: 20
+  maxSize: 15

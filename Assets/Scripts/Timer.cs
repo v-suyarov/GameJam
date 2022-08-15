@@ -4,17 +4,38 @@ using UnityEngine;
 using TMPro;
 public class Timer : MonoBehaviour
 {
+    public static Timer Instance { get; private set; }
     [SerializeField] private int StartTime = 30;
     public static int Time { get; private set; }
     [SerializeField] private TMP_Text TimeText;
 
+    void Awake()
+    {
+        if (!Instance)
+        {
+
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            Initialize();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
+
     private void Start()
     {
-        Time = StartTime;
+        
         StartCoroutine(Countdown());
     }
 
-   
+    private void Initialize()
+    {
+        Time = StartTime;
+    }
     private IEnumerator Countdown()
     {
         TimeText.text = Time.ToString();
