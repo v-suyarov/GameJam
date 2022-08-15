@@ -8,6 +8,7 @@ public class EventHandler : MonoBehaviour
 {
     public Leaderboard leaderboard;
     public GameObject meny;
+    public AudioClip audio;
     int leaderboardID = 5564;
     private void OnEnable()
     {
@@ -29,6 +30,7 @@ public class EventHandler : MonoBehaviour
 
                 StartCoroutine(leaderboard.SubmitScoreRoutine(Timer.Time));
                 meny.gameObject.SetActive(true);
+
             }
             GameObject.Destroy(objectSettings2.gameObject);
            
@@ -45,6 +47,8 @@ public class EventHandler : MonoBehaviour
         {
             Timer.Instance.AddTimer(objectSettings2.timeForEating);
             gameObject.GetComponent<CameraBehaviour>().AddCameraSize(objectSettings1.power);
+            gameObject.GetComponent<AudioSource>().pitch = UnityEngine.Random.Range(0.8f, 1.2f);
+            gameObject.GetComponent<AudioSource>().Play();
         }
     }
  

@@ -8,5 +8,5 @@ public class ObjectSettings : MonoBehaviour
     public int timeForEating = 1;
     [Tooltip("Мощьность определяет, какой из объектов будет поглащен, большая мощность поглащает меньшую")]
     public int power  = 0;
-
+    public int maxPower = 3000;
 }
