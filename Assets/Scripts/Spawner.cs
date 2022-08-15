@@ -8,16 +8,13 @@ public abstract class Spawner : MonoBehaviour
     [Range(1f, 50f)][SerializeField] protected float powerMultiplier = 1.5f;
     [SerializeField] protected GameObject[] prefabs = new GameObject[1];
     protected private Transform container;
+    
     private void Awake()
     {
         container = transform;
        
     }
-    private void Start()
-    {
-        Spawn();
-        EventBus.onUpdateSize?.Invoke();
-    }
+    
     protected Vector3 GetRandomPosition(int maxDistance)
     {
         Vector3 pos = Vector3.zero;

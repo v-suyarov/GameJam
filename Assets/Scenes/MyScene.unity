@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2829f45964d625b4d941d96055ea60a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerMultiplier: 49
+  powerMultiplier: 25.7
   prefabs:
   - {fileID: 1833073751513268395, guid: 0198a5c4a032011469e6655f82c9a5e5, type: 3}
   - {fileID: 359698509724177860, guid: c87c840ec82b7314196479860f930cb0, type: 3}
@@ -609,6 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "move\u0421ameraBackPerPower": 2
   maxSize: 25
+  desiredDuration: 1
 --- !u!114 &920568886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,9 +682,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777bd11ca0fc5034db69b34c1cd58ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerMultiplier: 1.5
+  powerMultiplier: 3
   prefabs:
   - {fileID: 4749957349608401289, guid: b9db07ab73226f04e878b854e0f5ef57, type: 3}
+  timerateSpawn: 0.1
 --- !u!4 &1231558963
 Transform:
   m_ObjectHideFlags: 0
@@ -1145,6 +1147,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1923592901, guid: d974aa72b3c770c48be56a884f349963, type: 3}
+      propertyPath: absorptionModifier
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7344120546304512771, guid: d974aa72b3c770c48be56a884f349963, type: 3}
       propertyPath: m_RootOrder
       value: 1

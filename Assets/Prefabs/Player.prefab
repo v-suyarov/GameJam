@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455ce23f3a8ac854aa01596dcb68f453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplicationFactorPerPower: 3
+  multiplicationFactorPerPower: 2
   maxSize: 15
 --- !u!1 &7344120546637690013
 GameObject:

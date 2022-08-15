@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class VegetationBehaviour : AIBehavior
 {
-   
+    private void OnDestroy()
+    {
+        VegetationSpawner.countObject--;
+    }
     protected override void Move()
     {
        

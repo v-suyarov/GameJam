@@ -32,12 +32,12 @@ public abstract class AIBehavior : MonoBehaviour
         if (UnityEngine.Random.Range(0, 2) == 0)
         {
             multiplier = UnityEngine.Random.Range(1f, SpeedMultiplier);
-            Debug.Log(1);
+            
         }
         else
         {
             multiplier = 1 / UnityEngine.Random.Range(1f, SpeedMultiplier);
-            Debug.Log(2);
+            
         }
         return multiplier;
     }

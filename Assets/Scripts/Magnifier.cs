@@ -6,7 +6,9 @@ using UnityEngine;
 public class Magnifier : MonoBehaviour
 {
     [Tooltip("Определяет, во сколько раз увеличится объект за 100 единиц мощности")]
-    [Range(1, 10f)] [SerializeField] private float multiplicationFactorPerPower = 2;
+    [Range(1, 100f)] [SerializeField] private float multiplicationFactorPerPower = 2;
+    [Tooltip("Определяет, какой процент мощности перейдет к объкту при поглощении другого объекта")]
+    [Range(0, 1f)] [SerializeField] private float absorptionModifier = 1f;
     [Tooltip("Максимальный размер до которого можно вырасти")]
     [SerializeField] private float maxSize = 15f;
 
@@ -39,7 +41,11 @@ public class Magnifier : MonoBehaviour
     }
     public void Increase(ObjectSettings absorbedObject)
     {
-        transform.GetComponent<ObjectSettings>().power += absorbedObject.power;
+        if (transform.CompareTag("Player"))
+        {
+            Debug.Log(123);
+        }
+        transform.GetComponent<ObjectSettings>().power += Mathf.CeilToInt(absorbedObject.power*absorptionModifier);
         UpdateSize();
     }
 }

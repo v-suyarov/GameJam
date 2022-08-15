@@ -24,17 +24,17 @@ public class EventHandler : MonoBehaviour
             GameObject.Destroy(objectSettings2.gameObject);
 
         }
-        else
+        /*else
         {
             objectSettings2.GetComponent<Magnifier>().Increase(objectSettings1);
             GameObject.Destroy(objectSettings1.gameObject);
             return;
-        }
+        }*/
 
         if(objectSettings1.CompareTag("Player"))
         {
             Timer.Instance.AddTimer(objectSettings2.timeForEating);
-            gameObject.GetComponent<CameraBehaviour>().move—ameraBack(objectSettings1.power);
+            gameObject.GetComponent<CameraBehaviour>().AddCameraSize(objectSettings1.power);
         }
     }
 
