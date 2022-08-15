@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: da12959467cfe1b459a36e9364df5a98
+guid: 5aeb3ffecf88a10418e239e87617d40c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Appetite
+  - Hangyaboly
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
