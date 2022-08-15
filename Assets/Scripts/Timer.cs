@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
         {
 
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            
             Initialize();
         }
         else

@@ -7,6 +7,7 @@ using TMPro;
 public class EventHandler : MonoBehaviour
 {
     public Leaderboard leaderboard;
+    public GameObject meny;
     int leaderboardID = 5564;
     private void OnEnable()
     {
@@ -27,8 +28,10 @@ public class EventHandler : MonoBehaviour
             {
 
                 StartCoroutine(leaderboard.SubmitScoreRoutine(Timer.Time));
+                meny.gameObject.SetActive(true);
             }
             GameObject.Destroy(objectSettings2.gameObject);
+           
 
         }
         /*else

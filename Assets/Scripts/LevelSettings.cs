@@ -24,7 +24,7 @@ public class LevelSettings : MonoBehaviour
         {
             
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+           
             Initialize();
         }
         else

@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class StartMenyController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject leaderboardView;
+    public Leaderboard leaderboard;
     void Start()
     {
         
@@ -14,5 +15,18 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void EnableLeaderboard(bool state)
+    {
+        if(state==true)
+        {
+            leaderboardView.SetActive(true);
+            StartCoroutine(leaderboard.FetchTopHighscoresRoutine());
+        }
+        else
+        {
+            leaderboardView.SetActive(false);
+        }
     }
 }
