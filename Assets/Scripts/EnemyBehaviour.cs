@@ -24,7 +24,7 @@ public class EnemyBehaviour : AIBehavior
             progress = 0f;
             elapsedTime = 0;
             positionFrom = transform.position;
-            desiredDuration = (target - positionFrom).magnitude * GetSpeedMultiplier() * Speed;
+            desiredDuration = (target - positionFrom).magnitude * GetSpeedMultiplier() * 1/Speed;
             prevRotate = transform.rotation;
             newRotate = RotateToTarget(target-transform.position);
             Debug.DrawLine(transform.position, target, Color.red, 8);
