@@ -4,14 +4,17 @@ using UnityEngine;
 
 public abstract class Spawner : MonoBehaviour
 {
-    [Tooltip("Множитель размера, чем больше число, тем более разнообразными будут размеры объектов")]
-    [Range(1f, 5f)][SerializeField] protected float sizeMultiplier = 1.5f;
+    [Tooltip("Множитель мощности, чем больше число, тем более разнообразными будут размеры и мощность объектов")]
+    [Range(1f, 50f)][SerializeField] protected float powerMultiplier = 1.5f;
     [SerializeField] protected GameObject[] prefabs = new GameObject[1];
     protected private Transform container;
+    
     private void Awake()
     {
         container = transform;
+       
     }
+    
     protected Vector3 GetRandomPosition(int maxDistance)
     {
         Vector3 pos = Vector3.zero;
